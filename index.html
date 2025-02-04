@@ -5,29 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Micah's Website</title>
     <link href="styles.css" rel="stylesheet" />
+  
 </head>
-<body>
-    <!-- This is the start of My Personal Website -->
-     <div id="title" class="rmiddle">
-        <h1 class="h1">About Micah</h1>
-     </div>
-    
-    <!-- <h2>A short website about me!!</h2>
-    <h3>Who am I</h3><br><br> -->
-    <div id="text" class="cmiddle">
-        <!--Quick bit about myself-->
-        <p class="p">My name is <strong>Micah Nava</strong>. At least that is what I go by. My real name is <em>Miqueas Nava</em> but I do not go by that because that's hard for most people to say. I am from a small town in the state of Oregon. I am currently a Senior here at Liberty University and I am majoring in Computer Science: Cyber Security. Something interesting about me is that I've been trained to play the piano classically and was in lessons for 9 years. I also love football, visit this link to see the latest NFL scores <a href="https://www.espn.com/nfl/scoreboard" target="_blank">NFL Scores</a>!!</p>
-        <p>The website I plan to build this semester is a Portfolio Website</p>
+<body class="parent" id="wrapper">
+ 
+    <nav class="topnav" id="tnav">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Experience</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="intro" id="welcome">
+        <h1>Welcome to Micah's Website</h1>
+        <p>My name is Micah and I am a software developer. I am passionate about creating software that is both functional and user-friendly. I have experience with a variety of programming languages and tools, and I am always looking to learn new things. I am currently seeking new opportunities to work on exciting projects with a talented team. Please feel free to contact me if you would like to discuss a project or job opportunity.</p>
     </div>
-    
-    <h4 class="cmiddle">I'd love to get to know who visited this website. Enter your name and email</h4>
-    <form class = "cmiddle">
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"> <br><br>
-        <input type="submit" value="Submit">
-    </form>
-    <h5 class="rmiddle">Visit My Other Site <a href="csslab.html"> Here</a></h5>
+    <div class="hero">
+        <img src="images/hero.jpg" alt="Hero Image" />
+
+    </div>
+    <div class="footer">
+        <p class="center">&copy; <span id="copyright"></span> Micah's Website. All rights reserved.</p>
+    </div>
+    <script>
+        // Use a Variable to Store the Current Year
+        const currentYear = new Date().getFullYear();
+        // Display the Current Year in the Footer
+        document.getElementById("copyright").innerHTML = currentYear;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            //Once page has fully loaded then display alert
+            alert("Hey There! Welcome to my website!");
+        });
+
+        // Change the background color of the page using javascript
+        document.getElementById('wrapper').style.backgroundColor = "darkgray";
+        document.getElementById('tnav').style.backgroundColor = "black";
+        document.getElementById('welcome').style.backgroundColor = "lightgray";
+    </script>
 </body>
 </html>
