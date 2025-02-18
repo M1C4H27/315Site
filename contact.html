@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micah's Website</title>
+    <link href="contact.css" rel="stylesheet" />
+  
+</head>
+<body class="parent" id="wrapper">
+ 
+    <nav class="topnav" id="tnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="intro" id="welcome">
+        <h1>Contact Me</h1>
+        <p>Get to know me more by adding me on
+    <a href="https://www.linkedin.com/in/micah-nava-91746a292" target="_blank"><strong>LinkedIn</strong></a> or reaching out by other means</p>
+    <p><strong>Email:</strong>  micahnava454@gmail.com</p>
+    <p><strong>Phone:</strong>  (503) 951-3613</p>
+    <p><strong>Github</strong>  M1C4H27</p> <br>
+
+    <p>Now, let me get to know you!! Fill out the information on the side. You will get a little suprise if you do!!</p>
+
+    </div>
+    <div class="form-container">
+        <form id="contact-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" required><br>
+            
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+          <!-- Error message (hidden by default) -->
+        <p id="errorMsg">Please fill out all fields correctly.</p>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+    <div id="popup">
+        <div id="popupContent"></div>
+        <button id="closePopup">Close</button>
+    </div>
+    
+    <div class="footer">
+        <p class="center">&copy; <span id="copyright"></span> Micah's Website. All rights reserved.</p>
+    </div>
+    <script src="prog2.js">
+       
+    </script>
+    
+</body>
+</html>

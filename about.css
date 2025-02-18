@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap');
+
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 40px 400px 60px;
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+  font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
+  
+  }
+  
+ 
+
+.topnav {
+  grid-area: 1 / 1 / 2 / 7;
+  overflow: hidden;
+  text-align: center; 
+  margin-bottom: -10px;
+}
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.intro{
+  grid-area: 2 / 1 / 3 / 4;
+}
+.hero{
+  grid-area: 2 / 4 / 3 / 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero img {
+  max-width: 100%;
+  height: 100%;
+}
+.footer{
+  grid-area: 3 / 1 / 4 / 7;
+}
+.center{
+  text-align: center;
+  
+}
+

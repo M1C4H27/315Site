@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micah's Website</title>
+    <link href="experience.css" rel="stylesheet" />
+  
+</head>
+<body class="parent" id="wrapper">
+ 
+    <nav class="topnav" id="tnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="intro" id="welcome">
+        <h1>Experience Page</h1>
+        <p>My name is Micah and I am a software developer. I am passionate about creating software that is both functional and user-friendly. I have experience with a variety of programming languages and tools, and I am always looking to learn new things. I am currently seeking new opportunities to work on exciting projects with a talented team. Please feel free to contact me if you would like to discuss a project or job opportunity.</p>
+    </div>
+    <div class="hero">
+        <img src="hero.jpg" alt="Hero Image" />
+
+    </div>
+    <div class="footer">
+        <p class="center">&copy; <span id="copyright"></span> Micah's Website. All rights reserved.</p>
+    </div>
+    <script>
+        // Use a Variable to Store the Current Year
+        const currentYear = new Date().getFullYear();
+        // Display the Current Year in the Footer
+        document.getElementById("copyright").innerHTML = currentYear;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            //Once page has fully loaded then display alert
+            alert("Hey There! Welcome to my website!");
+        });
+
+        // Change the background color of the page using javascript
+        document.getElementById('wrapper').style.backgroundColor = "darkgray";
+        document.getElementById('tnav').style.backgroundColor = "black";
+        document.getElementById('welcome').style.backgroundColor = "lightgray";
+    </script>
+    
+</body>
+</html>

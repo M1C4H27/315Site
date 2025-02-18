@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap');
+
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 40px 400px 60px;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
+  background-color: darkgray;
+  }
+  
+ 
+
+.topnav {
+  grid-area: 1 / 1 / 2 / 7;
+  overflow: hidden;
+  text-align: center; 
+  margin-bottom: -10px;
+  background-color: black;
+}
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.intro{
+  grid-area: 2 / 1 / 3 / 4;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+.intro a{
+ color: black;
+  text-decoration: none;
+}
+.form-container{
+  grid-area: 2 / 4 / 3 / 7;
+  background-color: lightgrey;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.footer{
+  grid-area: 3 / 1 / 4 / 7;
+}
+.center{
+  text-align: center;
+  
+}
+
+#name{
+  width: 50%;
+}
+#age{
+  width: 50%;
+}
+#phone{
+  width: 50%;
+}
+#email{
+  width: 50%;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.form-container input[type="submit"] {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #ddd;
+  color: black;
+}
+#errorMsg{
+  color: red;
+  display:none;
+  font-size: 12px;
+  margin-top: -26px;
+}
+#popup{
+  display:none;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align:center;
+}
+#closePopup{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
