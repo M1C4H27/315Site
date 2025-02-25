@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // All my variables taken from the document
     let roundsInput = document.getElementById("rounds");
     let gameForm = document.getElementById("game-form");
     let selectionDiv = document.getElementById("selection");
     let resultDiv = document.getElementById("result");
-    let resetButton = document.querySelector('input[type="reset"]'); // Select Reset button
-    
+    let resetButton = document.querySelector('input[type="reset"]'); 
+
+    // Array to hold possible answers
     let choices = ["rock", "paper", "scissors"];
+
+    // Variables to keep track of scores and rounds
     let playerScore = 0;
     let computerScore = 0;
     let totalRounds = 0;
@@ -16,11 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         totalRounds = parseInt(roundsInput.value);
         
+        // Error checking to make sure the user enters a valid number of rounds
         if (isNaN(totalRounds) || totalRounds <= 0 || totalRounds > 4) {
             alert("Please enter a valid number of rounds!");
             return;
         }
 
+        // These make sure that the variables are reset when the user starts a new game
         currentRound = 0;
         playerScore = 0;
         computerScore = 0;
@@ -37,12 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to determine the winner
     function determineWinner(playerChoice, computerChoice) {
+        // Check for a tie
         if (playerChoice === computerChoice) {
             return "It's a tie!";
         }
 
+        // Switch statement to check for win/lose conditions 
         switch (playerChoice) {
             case "rock":
+                // Return the correct output. Terenary operator is used to shorten the code
                 return computerChoice === "scissors" ? "You win! Rock beats Scissors." : "You lose! Paper beats Rock.";
             case "paper":
                 return computerChoice === "rock" ? "You win! Paper beats Rock." : "You lose! Scissors beats Paper.";
@@ -55,11 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to handle player choice
     function playRound(playerChoice) {
+        // Quick if statement to see if the game is over
         if (currentRound >= totalRounds) {
             alert("Game over! Please start a new game.");
             return;
         }
 
+        // Get computer choice and determine winner
         let computerChoice = getComputerChoice();
         let resultMessage = determineWinner(playerChoice, computerChoice);
 
