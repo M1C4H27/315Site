@@ -97,13 +97,23 @@ document.addEventListener("DOMContentLoaded", function () {
             selectionDiv.style.display = "none"; // Hide choices after game ends
         }
     }
-    // Reset the game when Reset button is clicked
+
     resetButton.addEventListener("click", function () {
         roundsInput.value = ""; // Reset input field
-        resultDiv.innerHTML = ""; // Clear results
+
+        // Clear the results
+        let childElements = resultDiv.children;
+
+        // Using a for loop to remove all the child elements effectively clearing the results
+        for (let i = childElements.length - 1; i >= 0; i--) {
+            resultDiv.removeChild(childElements[i]);
+        }
+
+        // Hiding the divs again
         selectionDiv.style.display = "none"; // Hide selection buttons
         resultDiv.style.display = "none"; // Hide results
     });
+
     // Add event listeners to buttons
     document.getElementById("rock").addEventListener("click", () => playRound("rock"));
     document.getElementById("paper").addEventListener("click", () => playRound("paper"));
