@@ -17,31 +17,33 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="intro" id="welcome">
-        <h1>Projects Page</h1>
-        <p>My name is Micah and I am a software developer. I am passionate about creating software that is both functional and user-friendly. I have experience with a variety of programming languages and tools, and I am always looking to learn new things. I am currently seeking new opportunities to work on exciting projects with a talented team. Please feel free to contact me if you would like to discuss a project or job opportunity.</p>
+        <h1>Simple JavaScript Games</h1>
+        <p>A few games built using JavaScript that can be played on my website.</p>
     </div>
-    <div class="hero">
-        <img src="hero.jpg" alt="Hero Image" />
-
+    <div class="projects" >
+       <h1>Rock Paper Scissors</h1>
+         <p>Play a game of Rock Paper Scissors against the computer.</p>
+         <p>First select how many round you would like to play (Max: 4.More on the way.)</p>
+         <img src="RockPaperScissors.png" class="rps" /> 
+        <form id="game-form" class="gform">
+            <label for="rounds">Rounds:</label><br>
+            <input type="number" id="rounds" name="rounds" required><br>
+            <input type="submit" value="Start">
+            <input type="reset" value="Reset">
+        </form>
+        <div id="selection" class="selections">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div id="result" class="results"></div>
     </div>
+   
     <div class="footer">
         <p class="center">&copy; <span id="copyright"></span> Micah's Website. All rights reserved.</p>
     </div>
-    <script>
-        // Use a Variable to Store the Current Year
-        const currentYear = new Date().getFullYear();
-        // Display the Current Year in the Footer
-        document.getElementById("copyright").innerHTML = currentYear;
-
-        document.addEventListener("DOMContentLoaded", function() {
-            //Once page has fully loaded then display alert
-            alert("Hey There! Welcome to my website!");
-        });
-
-        // Change the background color of the page using javascript
-        document.getElementById('wrapper').style.backgroundColor = "darkgray";
-        document.getElementById('tnav').style.backgroundColor = "black";
-        document.getElementById('welcome').style.backgroundColor = "lightgray";
+    <script src="proj3.js">
+       
     </script>
     
 </body>
