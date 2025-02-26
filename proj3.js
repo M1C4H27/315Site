@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let resultDiv = document.getElementById("result");
     let resetButton = document.querySelector('input[type="reset"]'); 
 
-    // Array to hold possible answers
+    // Array to hold possible answers assignnment 3
     let choices = ["rock", "paper", "scissors"];
 
     // Variables to keep track of scores and rounds
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return "It's a tie!";
         }
 
-        // Switch statement to check for win/lose conditions 
+        // Switch statement to check for win/lose conditions Assignment 3 
         switch (playerChoice) {
             case "rock":
                 // Return the correct output. Terenary operator is used to shorten the code
@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let resultMessage = determineWinner(playerChoice, computerChoice);
 
         // Score tracking
+        // Assignment 3 - If else if statement to check if the player wins or loses
         if (resultMessage.includes("You win")) {
             playerScore++;
         } else if (resultMessage.includes("You lose")) {
@@ -102,9 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
         roundsInput.value = ""; // Reset input field
 
         // Clear the results
+        // Using ChildNodes to get all the child elements of the resultDiv
         let childElements = resultDiv.children;
 
         // Using a for loop to remove all the child elements effectively clearing the results
+        // For loop for Assignment 3
         for (let i = childElements.length - 1; i >= 0; i--) {
             resultDiv.removeChild(childElements[i]);
         }
