@@ -11,6 +11,10 @@
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
   
   }
+  #wrapper{
+    background-color: darkgray;
+    
+  }
   
  
 
@@ -33,8 +37,25 @@
   background-color: #ddd;
   color: black;
 }
+#tnav{
+  background-color: black;
+}
 .intro{
-  grid-area: 2 / 1 / 3 / 4;
+  grid-area: 2 / 1 / 3 / 7;
+}
+#welcome{
+  background-color: lightgray;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+#welcome img{
+  
+  border-radius: 10px;
+  float: right;
+  height: 90%;
+  width: 30%;
+  margin-top: -4%;
 }
 .hero{
   grid-area: 2 / 4 / 3 / 7;
@@ -52,5 +73,12 @@
 .center{
   text-align: center;
   
+}
+
+.words{
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  text-shadow: 1px 2px 2px rgba(49, 68, 117, 0.351);
 }
 
