@@ -2,12 +2,12 @@
 
 
 html, body {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 40px 660px 60px;
+  grid-template-rows: 40px auto auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
@@ -53,11 +53,11 @@ html, body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 95%;
+  width: 94.5%;
 }
 
 .footer{
-  grid-area: 3 / 1 / 4 / 7;
+  grid-area: 4 / 1 / 4 / 7;
 }
 .center{
   text-align: center;
@@ -118,6 +118,18 @@ html, body {
   background-color: white;
   
 }
+.results p{
+  margin-left: 10px;
+  padding: 10px;
+
+}
+.output{
+  grid-area: 3 / 1 / 4 / 7;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
 #errorMsg{
   color: red;
   display:none;
@@ -138,22 +150,3 @@ html, body {
 }
 
 
-#popup{
-  display:none;
-  position:fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  text-align:center;
-}
-#closePopup{
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}

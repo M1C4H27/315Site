@@ -1,8 +1,35 @@
-
 // Variable for contact-form
 let form = document.forms["contact-form"];
 
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    
+   
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page reload
+        console.log("Form submitted");
+        // Validation Requirement - 2
+        validation();
+
+        // User selection requirement - 1
+        selection();
+
+        // Display File Content requirement 3--- Only txt files 
+        files();
+        document.getElementById("contact-form").reset();
+        document.getElementById("selections").innerHTML = "";
+      
+         // Log the form data to the console
+        console.log(document.getElementById("contact-form").elements["name"].value);
+        console.log(document.getElementById("contact-form").elements["phone"].value);
+       
+        
+    });
+    // Add event listener to checkboxes
+    document.getElementById("contact-form").addEventListener("change", selection);
+    
+});
 
 function validation()
 {
@@ -74,42 +101,21 @@ function selection(){
 }
 function files()
 {
+    let form = document.forms["contact-form"];
     // Get the file input element
     let fileInput = form.elements["file"];
     // Get the file name
     let fileName = fileInput.files[0].name;
     // Display the file name
-    document.getElementById("selections").innerHTML = `<p> ${fileName}</p>`;
+    document.getElementById("fileOutput").innerHTML = `<h1> ${fileName}</h1>`;
     console.log(fileName);
 
+    // Read the file
     const reader = new FileReader();
     reader.onload = function(event) {
         const fileContent = event.target.result;
-        document.getElementById("selections").innerHTML = `<p> ${fileContent}</p>`;
+        document.getElementById("fileOutput").innerHTML += `<p> ${fileContent}</p><br> `;
         console.log('File content:', fileContent);
     };
     reader.readAsText(fileInput.files[0]);
 }
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent page reload
-        console.log("Form submitted");
-        // Validation Requirements
-        validation();
-
-        // User selection requirements
-        selection();
-        files();
-        document.getElementById("contact-form").reset();
-        document.getElementById("selections").innerHTML = "";
-      
-         // Log the form data to the console
-        console.log(document.getElementById("contact-form").elements["name"].value);
-        console.log(document.getElementById("contact-form").elements["phone"].value);
-       
-        
-    });
-    // Add event listener to checkboxes
-    document.getElementById("contact-form").addEventListener("change", selection);
-    
-});
