@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micah's Website</title>
+    <link href="favanimal.css" rel="stylesheet" />
+  
+</head>
+<body class="parent" id="wrapper">
+ 
+    <nav class="topnav" id="tnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="intro" id="welcome">
+        <h1>Animal Selections</h1>
+        <div class=results id="selections">
+
+
+        </div>
+
+    </div>
+    <div class="form-container">
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <p id="nameError">Invalid name: Name must contain only letters</p> <br>
+          <input type="text" id="name" name="name" placeholder="Full Name" required><br>
+      
+          <label for="phone">Phone Number:</label>
+          <p id="phoneError">Invalid phone number</p><br>
+          <input type="tel" id="phone" name="phone" placeholder="xxxxxxxxxx" required><br>
+      
+          <!-- Checkbox section -->
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="animals" value="elephant"> Elephant</label>
+            <label><input type="checkbox" name="animals" value="giraffe"> Giraffe</label>
+            <label><input type="checkbox" name="animals" value="lion"> Lion</label>
+            <label><input type="checkbox" name="animals" value="tiger"> Tiger</label>
+            <label><input type="checkbox" name="animals" value="bears"> Bears</label>
+            <label><input type="checkbox" name="animals" value="horse"> Horse</label>
+            <label><input type="checkbox" name="animals" value="cats"> Cats</label>
+            <label><input type="checkbox" name="animals" value="dogs"> Dogs</label>
+            <label><input type="checkbox" name="animals" value="monkeys"> Monkeys</label>
+            <label><input type="checkbox" name="animals" value="birds"> Birds</label>
+            <label><input type="checkbox" name="animals" value="turtles"> Turtles</label>
+            <label><input type="checkbox" name="animals" value="sharks"> Sharks</label>
+            <label><input type="checkbox" name="animals" value="goats"> Goats</label>
+            <label><input type="checkbox" name="animals" value="hamsters"> Hamsters</label>
+            <label><input type="checkbox" name="animals" value="dinosaurs"> Dinosaurs</label>
+
+           </div>
+           <input type="file" id="file"><br><br>
+          <p id="errorMsg">Please fill out all fields correctly.</p>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+    <div id="popup">
+        <div id="popupContent"></div>
+        <button id="closePopup">Close</button>
+    </div>
+    
+    <div class="footer">
+        <p class="center">&copy; <span id="copyright"></span> Micah's Website. All rights reserved.</p>
+    </div>
+    <script src="proj7.js">
+       
+    </script>
+    
+</body>
+</html>
