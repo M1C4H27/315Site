@@ -3,9 +3,6 @@ let form = document.forms["contact-form"];
 
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    
-   
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent page reload
         console.log("Form submitted");
@@ -101,7 +98,6 @@ function selection(){
 }
 function files()
 {
-    let form = document.forms["contact-form"];
     // Get the file input element
     let fileInput = form.elements["file"];
     // Get the file name
