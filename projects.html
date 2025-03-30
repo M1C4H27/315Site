@@ -38,13 +38,51 @@
         </div>
         <div id="result" class="results"></div>
     </div>
-   
+   <div class="Tasks">
+        <h1>Task List</h1>
+        <p>Keep track of your tasks with this simple task list.</p>
+        <p>Click the button below to add a task.</p>
+        <button id="add-task">Add Task</button>
+        <form id="taskForm">
+            <label for="task-name">Task Name:</label><br>
+            <input type="text" id="task-name" name="task-name" required><br>
+            <label for="due-date">Due Date:</label><br>
+            <input type="date" id="due-date" name="due-date" required><br>
+            <label for="priority">Priority:</label><br>
+            <input type="number" id="priority" name="priority" min="1" max="5" required><br>
+            <label for="status">Status:</label><br>
+            <select id="status" name="status" required>
+                <option value="Not-Started">Not Started</option>
+                <option value="In-Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </form>
+   </div>
+   <div id="task-list" class="taskList">
+        <table>
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="task-table-body">
+                 <!-- Task items will be added here -->
+            </tbody>
+        </table>
+    </div>
     <div class="footer">
         <p class="center">&copy; <span id="copyright"></span> Micah's Website. All rights reserved.</p>
     </div>
-    <script src="proj3.js">
+    <script src="proj3.js"  defer>
        
     </script>
+    <script src="objects.js" defer></script>
     
 </body>
 </html>

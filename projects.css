@@ -5,7 +5,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 40px 150px 400px;
+  grid-template-rows: 40px 150px 400px 400px;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
@@ -47,6 +47,20 @@
 }
 .projects{
   grid-area: 3 / 1 / 3 / 7;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+.Tasks{
+  grid-area: 4 / 1 / 4 / 3;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+.taskList {
+  grid-area: 4 / 3 / 4 / 7;
   background-color: lightgray;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -114,7 +128,7 @@
  
 }
 .footer{
-  grid-area: 4 / 1 / 4 / 7;
+  grid-area: 5 / 1 / 5 / 7;
 }
 .center{
   text-align: center;
@@ -150,4 +164,36 @@
 .projects input[type="reset"]:hover {
   background-color: #ddd;
   color: black;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #eee;
+}
+#taskForm{
+  display:none;
+  margin-left: 25%;
+  margin-top: -5%;
+}
+
+.completed{
+  background-color: green;
+  color: white;
+}
+.overdue{
+  background-color: red;
+  color: white;
+}
+#task-list{
+  max-height: 400px;
+  overflow-x: auto;
+  overflow-y: auto;
 }
