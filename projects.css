@@ -5,7 +5,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 40px 150px 400px 400px;
+  grid-template-rows: 40px 150px 400px 400px 300px;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
@@ -127,8 +127,15 @@
   display: none;
  
 }
-.footer{
+.customize{
   grid-area: 5 / 1 / 5 / 7;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+.footer{
+  grid-area: 6 / 1 / 6 / 7;
 }
 .center{
   text-align: center;
