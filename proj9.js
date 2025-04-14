@@ -35,7 +35,7 @@ function applyCustomizations(bgColor, textColor, fontSize) {
     document.body.style.backgroundColor = bgColor;
     document.body.style.color = textColor;
     document.body.style.fontSize = fontSize + "px";
-    document.body.style.transition = "all 0.5s ease"; // Smooth transition for the changes
+    document.body.style.transition = "all 0.3s ease"; 
    
 }
 // Event listener for the form submission
