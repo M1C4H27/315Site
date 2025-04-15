@@ -5,7 +5,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 40px 150px 400px 400px 300px;
+  grid-template-rows: 40px 150px 400px 400px 300px 400px;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
@@ -135,7 +135,7 @@
   padding: 20px;
 }
 .footer{
-  grid-area: 6 / 1 / 6 / 7;
+  grid-area: 8 / 1 /8 / 7;
 }
 .center{
   text-align: center;
@@ -203,4 +203,48 @@ th {
   max-height: 400px;
   overflow-x: auto;
   overflow-y: auto;
+}
+
+#puzzle {
+  grid-area: 6 / 1 / 6 / 7;
+  display:flex;
+  margin-bottom: 20px;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+#text{
+  
+  width: 30%;
+  height: 100%;
+}
+#container{
+ 
+  width: 30%;
+  height: 100%;
+ 
+}
+#puzzle-container{
+  display:grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 2px;
+  justify-content: center;
+}
+.pieces{
+  border: 1px solid darkblue;
+  width: 100px;
+  height: 90px;
+  object-fit: cover;
+  cursor: grab;
+}
+.pieces.hovered {
+  filter: brightness(110%) saturate(140%);
+  outline: 2px solid #1e90ff;
+  transition: all 0.2s ease;
+}
+#win-message {
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
