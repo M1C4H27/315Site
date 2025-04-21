@@ -5,7 +5,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 40px 200px 400px 60px;
+  grid-template-rows: 40px 200px 400px 350px 60px;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
@@ -49,13 +49,47 @@
   margin-top:-50px;
 }
 
-
-.footer{
+.dogDiv{
   grid-area: 4 / 1 / 4 / 7;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  
+}
+.footer{
+  grid-area: 5 / 1 / 5 / 7;
 }
 .center{
   text-align: center;
   
+}
+
+.col {
+  padding: 1%;
+}
+.col-lg{
+    display: flex;
+    height: auto;
+    width: 10%;
+    overflow: hidden;
+    margin: 10px 0;
+   
+   
+}
+
+.col-lg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.442);
+    transition: transform 0.2s;
+}
+
+.imgrid {
+  display: flex;
+  flex-direction: row;
 }
 
 
