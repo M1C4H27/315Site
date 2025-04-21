@@ -2,8 +2,8 @@
 // I will use the dog API to get a random dog image and display it on the page
 
 const url = `https://api.thedogapi.com/v1/images/search?limit=8`;
-//const api_key = "live_IJ4gS1mry9lLpOFrjJL84ejokp0BBzgXayiRZRWsDLW1wEQPAPbXDqhIuj1T5mMF"
-const api_key="invalid";
+const api_key = "live_IJ4gS1mry9lLpOFrjJL84ejokp0BBzgXayiRZRWsDLW1wEQPAPbXDqhIuj1T5mMF"
+
  fetch(url,{headers: {
       'x-api-key': api_key
     }})
