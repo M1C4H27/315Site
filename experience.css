@@ -5,8 +5,8 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 40px 400px 60px;
-  grid-column-gap: 0px;
+  grid-template-rows: 40px 400px 400px 60px;
+  grid-column-gap: 10px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
   
@@ -19,6 +19,7 @@
   overflow: hidden;
   text-align: center; 
   margin-bottom: -10px;
+  background-color: black;
 }
 .topnav a {
   display: inline-block;
@@ -35,19 +36,66 @@
 }
 .intro{
   grid-area: 2 / 1 / 3 / 4;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
 }
 .hero{
   grid-area: 2 / 4 / 3 / 7;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+ 
+
 }
 .hero img {
   max-width: 100%;
   height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+}
+.competition{
+  
+  grid-area: 3 / 1 / 3 / 4;
+  background-color: lightgrey;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.competition img{
+  max-width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.text-section h1{
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+.text-section p{
+  font-size: 14px;
+  text-align: left;
+  margin-left: 20px;
+}
+#resume a{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  background-color: black;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 .footer{
-  grid-area: 3 / 1 / 4 / 7;
+  grid-area: 4 / 1 / 4 / 7;
 }
 .center{
   text-align: center;
