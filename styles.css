@@ -9,12 +9,13 @@
   grid-column-gap: 0px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
+  background-color: darkgray;
   
   }
-  #wrapper{
-    background-color: darkgray;
-    
-  }
+#wrapper{
+  background-color: darkgray; 
+}
+
   
  
 
