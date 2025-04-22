@@ -9,7 +9,7 @@
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   font-family: 'Montserrat', 'PT Sans', 'Quicksand', sans-serif;
-  
+  background-color: darkgray;
   }
   
  
@@ -93,6 +93,11 @@
   background-color: black;
   border-radius: 10px;
   transition: background-color 0.3s ease;
+}
+#title,
+.text{
+  display:none;
+
 }
 .footer{
   grid-area: 4 / 1 / 4 / 7;
