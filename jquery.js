@@ -9,7 +9,7 @@ $(document).ready(function () {
       const link = $(this).attr("href");
   
       // Ignore anchor links (e.g., #section) and external links
-      if (link && !link.startsWith("#") && !link.startsWith("http")) {
+      if (link && !link.startsWith("#") && !link.startsWith("https")) {
         event.preventDefault(); // prevent instant navigation
   
         $("body").fadeOut(400, function () {
