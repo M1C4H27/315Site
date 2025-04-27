@@ -21,7 +21,7 @@ const App = () => {
         <div className="hero" id="text">
           <h1>React Framework</h1>
           <p>
-            This page was built using react and is a simple example of react. It includes a navigation bar, a form for favorite fruit, and a footer. The page is styled using CSS and includes some JavaScript for interactivity.
+            This page was built using react and is a simple example of react. It includes a navigation bar, some text, and a footer. The page is styled using CSS and includes some JavaScript for interactivity.
           </p>
         </div>
         {/* Footer */}
