@@ -6,7 +6,8 @@
     <title>Micah's Website</title>
     <link href="experience.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
   
 </head>
@@ -18,6 +19,7 @@
         <a href="projects.html">Projects</a>
         <a href="experience.html">Experience</a>
         <a href="contact.html">Contact</a>
+        <a href="react.html">Final</a>
     </nav>
     <div class="intro" id="welcome">
         <h1 id="title">Experience</h1>
@@ -42,6 +44,17 @@
         </div>
         
         
+    </div>
+    <div class="search" >
+        <h1>Random Predictive Search</h1>
+        <form id="randSearch"> 
+            <label for="fruit">What is your favorite fruit? </label>
+            <input id="fruit" type="text" placeholder="Start typing a fruit..."/><br>
+            <button type="submit">Submit</button> <br> <br>
+        </form>
+       
+        <div id="result"></div>
+        <p><strong>Note:</strong>To be removed</p>
     </div>
     <div class="footer">
         <p class="center">&copy; <span id="copyright"></span> Micah's Website. All rights reserved.</p>

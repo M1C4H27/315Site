@@ -99,11 +99,22 @@
   display:none;
 
 }
+.search{
+  grid-area: 3 / 4 / 3 / 7;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
 .footer{
   grid-area: 4 / 1 / 4 / 7;
 }
 .center{
   text-align: center;
   
+}
+#result{
+ 
+  height:5%;
 }
 

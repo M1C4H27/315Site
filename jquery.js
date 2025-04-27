@@ -34,3 +34,29 @@ $(document).ready(function () {
       width: "300px" // optional resizing
     }, 1000);
   });
+  $(document).ready(function() {
+    var fruits = [
+      "Apple",
+      "Banana",
+      "Blueberry",
+      "Cherry",
+      "Grape",
+      "Mango",
+      "Orange",
+      "Peach",
+      "Strawberry",
+      "Watermelon"
+    ];
+  
+    $("#fruit").autocomplete({
+      source: fruits,
+      minLength: 0 
+    });
+    $("#randSearch").submit(function(e) {
+      e.preventDefault(); // Prevent form from refreshing page
+      var favoriteFruit = $("#fruit").val(); 
+      $("#result").html("Your favorite fruit is: <strong>" + favoriteFruit + "</strong>"); // Display message
+      $("#fruit").val("");
+    });
+    
+  });
